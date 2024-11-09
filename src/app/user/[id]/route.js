@@ -8,3 +8,15 @@ export async function GET(request , {params}){
     
     return Response.json(user)
 }
+
+
+export async function DELETE(request , {params}){
+    const {id} = await params ;
+
+    const index = users.findIndex((user) => user.id === parseInt(id) )
+    const newArray = users.splice( index ,)
+    
+    console.log(newArray);
+    
+    
+}
